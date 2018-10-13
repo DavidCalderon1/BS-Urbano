@@ -1,3 +1,45 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+    height: 100vp;
+    background-image: linear-gradient(-90deg, #11273f, #1b95a7);
+}
+.container {
+    min-height: 300px;
+}
+
+.txt-logo {
+    font-size: 3em;
+    color:white;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.txt-logo-1{
+    font-size: 3em;
+}
+
+.buttons a, .txt-logo {
+    margin-bottom: 10px;
+
+}
+
+.buttons a{
+    width: 200px;
+    border-radius: 15px;
+}
+
+.trapecio-top {
+    width: 250px;
+    height: 0px;
+    border-right: 60px solid transparent;
+    border-left: 60px solid transparent;
+    border-bottom: 100px solid #428bca;
+}
+.trapecio-button {
+    width: 250px;
+    height: 0px;
+    border-right: 60px solid transparent;
+    border-left: 60px solid transparent;
+    border-top: 100px solid #428bca;
+}
