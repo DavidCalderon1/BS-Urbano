@@ -1,0 +1,128 @@
+Apuntes
+Iniciar el proyecto
+	
+	bundle install 
+	rake db:migrate
+
+al cambiar de ubicacion el proyecto 
+	modifricar el archivo: config/environments/development.rb
+		- determinar el host de la aplicacion para la autenticacion
+			config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+log de configuracion de autenticacion con devise
+	https://github.com/plataformatec/devise
+
+	C:\xampp\htdocs\BS-Urbano>rails generate devise:install
+	      create  config/initializers/devise.rb
+	      create  config/locales/devise.en.yml
+		===============================================================================
+
+		Some setup you must do manually if you haven't yet:
+
+		  1. Ensure you have defined default url options in your environments files. Here
+		     is an example of default_url_options appropriate for a development environment
+		     in config/environments/development.rb:
+
+		       config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+		     In production, :host should be set to the actual host of your application.
+
+		  2. Ensure you have defined root_url to *something* in your config/routes.rb.
+		     For example:
+
+		       root to: "home#index"
+
+		  3. Ensure you have flash messages in app/views/layouts/application.html.erb.
+		     For example:
+
+		       <p class="notice"><%= notice %></p>
+		       <p class="alert"><%= alert %></p>
+
+		  4. You can copy Devise views (for customization) to your app by running:
+
+		       rails g devise:views
+
+		===============================================================================
+
+	C:\xampp\htdocs\BS-Urbano>rails generate devise User
+	      invoke  active_record
+	      create    db/migrate/20181019183459_devise_create_users.rb
+	      create    app/models/user.rb
+	      invoke    test_unit
+	      create      test/models/user_test.rb
+	      create      test/fixtures/users.yml
+	      insert    app/models/user.rb
+	       route  devise_for :users
+
+	C:\xampp\htdocs\BS-Urbano>rails db:migrate
+		== 20181019183459 DeviseCreateUsers: migrating ================================
+		-- create_table(:users)
+		   -> 0.1433s
+		-- add_index(:users, :email, {:unique=>true})
+		   -> 0.0559s
+		-- add_index(:users, :reset_password_token, {:unique=>true})
+		   -> 0.0499s
+		== 20181019183459 DeviseCreateUsers: migrated (0.2528s) =======================
+
+	C:\xampp\htdocs\BS-Urbano>rails generate devise:views users
+	      invoke  Devise::Generators::SharedViewsGenerator
+	      create    app/views/users/shared
+	      create    app/views/users/shared/_links.html.erb
+	      invoke  form_for
+	      create    app/views/users/confirmations
+	      create    app/views/users/confirmations/new.html.erb
+	      create    app/views/users/passwords
+	      create    app/views/users/passwords/edit.html.erb
+	      create    app/views/users/passwords/new.html.erb
+	      create    app/views/users/registrations
+	      create    app/views/users/registrations/edit.html.erb
+	      create    app/views/users/registrations/new.html.erb
+	      create    app/views/users/sessions
+	      create    app/views/users/sessions/new.html.erb
+	      create    app/views/users/unlocks
+	      create    app/views/users/unlocks/new.html.erb
+	      invoke  erb
+	      create    app/views/users/mailer
+	      create    app/views/users/mailer/confirmation_instructions.html.erb
+	      create    app/views/users/mailer/email_changed.html.erb
+	      create    app/views/users/mailer/password_change.html.erb
+	      create    app/views/users/mailer/reset_password_instructions.html.erb
+	      create    app/views/users/mailer/unlock_instructions.html.erb
+
+	C:\xampp\htdocs\BS-Urbano>rails generate devise:controllers users
+	      create  app/controllers/users/confirmations_controller.rb
+	      create  app/controllers/users/passwords_controller.rb
+	      create  app/controllers/users/registrations_controller.rb
+	      create  app/controllers/users/sessions_controller.rb
+	      create  app/controllers/users/unlocks_controller.rb
+	      create  app/controllers/users/omniauth_callbacks_controller.rb
+		===============================================================================
+
+		Some setup you must do manually if you haven't yet:
+
+		  Ensure you have overridden routes for generated controllers in your routes.rb.
+		  For example:
+
+		    Rails.application.routes.draw do
+		      devise_for :users, controllers: {
+		        sessions: 'users/sessions'
+		      }
+		    end
+
+		===============================================================================
+
+	ruta para usar el controlador: 
+		devise_for :users, controllers: { sessions: 'users/sessions' }
+
+botones de autenticacion 
+	https://github.com/plataformatec/devise/wiki/How-To:-Add-sign_in,-sign_out,-and-sign_up-links-to-your-layout-template
+
+# rutas para todas las funciones de autenticacion
+  	devise_for :users, :controllers => { 
+		:registrations => "users/registrations",
+		:sessions => "users/sessions",
+		:confirmations => "users/confirmations",
+		:passwords => "users/passwords",
+		:unlocks => "users/unlocks",
+		:mailer => "users/mailer"
+  	}
