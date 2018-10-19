@@ -126,3 +126,7 @@ botones de autenticacion
 		:unlocks => "users/unlocks",
 		:mailer => "users/mailer"
   	}
+
+
+borrar commits intermedios 
+	http://jonsegador.com/2015/06/borrar-commits-de-git-reset-rebase-cherry-pick/
