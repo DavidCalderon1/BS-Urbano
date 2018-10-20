@@ -130,3 +130,7 @@ botones de autenticacion
 
 borrar commits intermedios 
 	http://jonsegador.com/2015/06/borrar-commits-de-git-reset-rebase-cherry-pick/
+
+
+Inicio sesión RRSS
+	https://medium.com/@ajayramesh/social-login-with-omniauth-and-rails-5-0-ad2bbd2a998e
