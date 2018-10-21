@@ -11,15 +11,18 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="/js/main.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/util.css">
     <link rel="stylesheet" type="text/css" href="/css/main.css">
   </head>
 
   <body>
-    <ul class="hmenu">
-      <%= render 'layouts/menu/registration_items' %>
-      <%= render 'layouts/menu/login_items' %>
-    </ul>
+    <%= render 'layouts/menu/top_items' %>
     <%= yield %>
+    <%= render 'layouts/menu/buttom_items' %>
   </body>
 </html>
+
