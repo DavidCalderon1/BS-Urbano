@@ -112,7 +112,7 @@ ActiveRecord::Schema.define(version: 2018_11_02_062627) do
   create_table "users", force: :cascade do |t|
     t.string "name", default: "", null: false
     t.string "email", default: "", null: false
-    t.integer "barrio_id", null: false
+    t.integer "barrio_id"
     t.string "direccion", default: ""
     t.string "telefono", default: "", null: false
     t.string "foto", default: "", null: false
