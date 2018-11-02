@@ -26,7 +26,9 @@
 
   <body>
     <%= render 'layouts/menu/top_items' %>
-    <%= yield %>
+    <div class="contenedor">
+        <%= yield %>
+    </div>
     <%= render 'layouts/menu/buttom_items' %>
   </body>
 </html>

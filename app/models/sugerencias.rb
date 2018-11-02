@@ -1,0 +1,2 @@
+class Sugerencias < ApplicationRecord
+end

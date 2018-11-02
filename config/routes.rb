@@ -1,16 +1,16 @@
 Rails.application.routes.draw do
 
-  resources :ruta
+  resources :sugerencias
+  resources :barrios
+  resources :casos
   resources :estados
   resources :localidades
-  resources :casos
-  resources :publicaciones
-  resources :tipo_basuras
-  resources :barrios
-  resources :tips
   resources :notificaciones
-  resources :sugerencia
   resources :operadores
+  resources :publicaciones
+  resources :rutas
+  resources :tipo_basuras
+  resources :tips
 	# rutas para todas las funciones de autenticacion
   	devise_for :users, :controllers => { 
 		:registrations => "users/registrations",

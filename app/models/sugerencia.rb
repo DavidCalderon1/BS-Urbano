@@ -1,2 +1,0 @@
-class Sugerencia < ApplicationRecord
-end
