@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Detalle:</strong>
+  <%= @sugerencium.detalle %>
+</p>
+
+<p>
+  <strong>Usuario:</strong>
+  <%= @sugerencium.usuario_id %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @sugerencium.fecha %>
+</p>
+
+<%= link_to 'Edit', edit_sugerencium_path(@sugerencium) %> |
+<%= link_to 'Back', sugerencia_path %>

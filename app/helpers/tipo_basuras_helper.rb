@@ -1,0 +1,2 @@
+module TipoBasurasHelper
+end

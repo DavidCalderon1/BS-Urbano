@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Operador:</strong>
+  <%= @rutum.operador_id %>
+</p>
+
+<p>
+  <strong>Barrio:</strong>
+  <%= @rutum.barrio_id %>
+</p>
+
+<p>
+  <strong>Horario:</strong>
+  <%= @rutum.horario %>
+</p>
+
+<%= link_to 'Edit', edit_rutum_path(@rutum) %> |
+<%= link_to 'Back', ruta_path %>

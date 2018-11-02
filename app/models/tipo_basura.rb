@@ -1,0 +1,2 @@
+class TipoBasura < ApplicationRecord
+end

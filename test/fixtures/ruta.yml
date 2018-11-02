@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  operador_id: 1
+  barrio_id: 1
+  horario: MyString
+
+two:
+  operador_id: 1
+  barrio_id: 1
+  horario: MyString
