@@ -1,26 +1,67 @@
-<h2>Log in</h2>
+<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100"> 
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => { :class => "login100-form validate-form" }) do |f| %>
+        	<span class="login100-form-title p-b-43">
+						BS-Urbano
+					</span>
+					
+					
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => "input100" %>
+						<span class="focus-input100"></span>
+						<span class="label-input100">Email</span>
+					</div>
+					
+					
+					<div class="wrap-input100 validate-input" data-validate="Password is required">
+            <%= f.password_field :password, autocomplete: "current-password", :class => "input100"   %>
+						<span class="focus-input100"></span>
+            <span class="label-input100">Contraseña</span>
+            
+          
+					</div>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+					<div class="flex-sb-m w-full p-t-3 p-b-32">
+            <% if devise_mapping.rememberable? -%>
+            <div class="contact100-form-checkbox">
+                <%= f.check_box :remember_me, :class => "input-checkbox100" %>
+                <%= f.label :remember_me, "Recordarme", :class => "label-checkbox100" %>
+              </div>
+            <% end -%>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
+						<div>
+					
+              <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+                  <%= link_to "Olvidó su contraseña?", new_password_path(resource_name), :class => "txt1" %>
+              <% end -%>
+						</div>
+					</div>
+			
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end -%>
+          <div class="container-login100-form-btn">
+            <%= f.submit "Ingresar", :class => "login100-form-btn" %>
+					</div>
+					
+					<div class="text-center p-t-46 p-b-20">
+						<span class="txt2">
+							o Ingresar usando
+						</span>
+					</div>
 
-  <div class="actions">
-    <%= f.submit "Log in", :class => "btn btn-success" %>
-  </div>
-<% end %>
+					<div class="login100-form-social flex-c-m">
+						<a href="#" class="login100-form-social-item flex-c-m bg1 m-r-5">
+							<i class="fa fa-facebook-f" aria-hidden="true"></i>
+						</a>
 
-<%= render "users/shared/links" %>
+						<a href="#" class="login100-form-social-item flex-c-m bg3 m-r-5">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</a>
+					</div>
+      <% end %>
+
+				<div class="login100-more" style="background-image: url('/images/bg-01.jpg');">
+				</div>
+			</div>
+		</div>
+	</div>
