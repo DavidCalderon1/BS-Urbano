@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 2018_11_03_202207) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
+  
   create_table "routes", force: :cascade do |t|
     t.integer "operator_id"
     t.integer "suburb_id"

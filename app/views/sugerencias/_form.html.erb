@@ -1,0 +1,17 @@
+<%= form_with(model: sugerencia, local: true, url: sugerencias_path) do |form| %>
+  <% if sugerencia.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sugerencia.errors.count, "error") %> prohibited this sugerencia from being saved:</h2>
+
+      <ul>
+      <% sugerencia.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+class Rutas < ApplicationRecord
+end

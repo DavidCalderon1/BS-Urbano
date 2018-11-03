@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  caso_id: 1
+  usuario_id: 1
+  visto: 1
+
+two:
+  caso_id: 1
+  usuario_id: 1
+  visto: 1

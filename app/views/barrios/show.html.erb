@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @barrio.nombre %>
+</p>
+
+<p>
+  <strong>Localidad:</strong>
+  <%= @barrio.localidad_id %>
+</p>
+
+<p>
+  <strong>Latitud:</strong>
+  <%= @barrio.latitud %>
+</p>
+
+<p>
+  <strong>Longitud:</strong>
+  <%= @barrio.longitud %>
+</p>
+
+<%= link_to 'Edit', edit_barrio_path(@barrio) %> |
+<%= link_to 'Back', barrios_path %>
