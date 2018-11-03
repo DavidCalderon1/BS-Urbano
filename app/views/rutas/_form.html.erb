@@ -1,4 +1,4 @@
-<%= form_with(model: ruta, local: true) do |form| %>
+<%= form_with(model: ruta, local: true, url: rutas_path) do |form| %>
   <% if ruta.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(ruta.errors.count, "error") %> prohibited this ruta from being saved:</h2>

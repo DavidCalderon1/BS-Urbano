@@ -1,4 +1,4 @@
-<%= form_with(model: sugerencia, local: true) do |form| %>
+<%= form_with(model: sugerencia, local: true, url: sugerencias_path) do |form| %>
   <% if sugerencia.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(sugerencia.errors.count, "error") %> prohibited this sugerencia from being saved:</h2>
