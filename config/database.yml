@@ -23,6 +23,7 @@ default: &default
 
 development:
   <<: *default
+  # host: localhost
   database: ddrfj2k6o516ta
   username: aowqcdcmttapfg
   password: 690e28003f1023aff906086132c81c0242cc8c221065a64f3f71507481a0495b
@@ -59,6 +60,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
+  # host: localhost
   database: ddrfj2k6o516ta
   username: aowqcdcmttapfg
   password: 690e28003f1023aff906086132c81c0242cc8c221065a64f3f71507481a0495b
@@ -84,6 +86,7 @@ test:
 #
 production:
   <<: *default
+  # host: localhost
   database: ddrfj2k6o516ta
   username: aowqcdcmttapfg
   password: 690e28003f1023aff906086132c81c0242cc8c221065a64f3f71507481a0495b

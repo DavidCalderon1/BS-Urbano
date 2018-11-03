@@ -134,3 +134,10 @@ borrar commits intermedios
 
 Inicio sesión RRSS
 	https://medium.com/@ajayramesh/social-login-with-omniauth-and-rails-5-0-ad2bbd2a998e
+
+Sistemas de roles y permisos 
+	https://github.com/RolifyCommunity/rolify
+	
+	https://chunksofco.de/very-simple-api-permissions-in-rails-d37e21f09ff8
+	https://github.com/chaps-io/access-granted
+	https://www.culttt.com/2016/01/20/implementing-roles-and-permissions-in-ruby-on-rails/

@@ -628,3 +628,14 @@ input.input100 {
 /*===========================================================Slider*/
 
 
+body > nav + .contenedor {
+  padding-top: 65px;
+  padding-bottom: 55px;
+}
+
+body > .contenedor > form input {
+  border-width: 2px;
+  border-style: inset;
+  border-color: initial;
+  border-image: initial;
+}
