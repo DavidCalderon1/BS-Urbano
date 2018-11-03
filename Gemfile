@@ -28,6 +28,12 @@ gem 'font-awesome-rails'
 # para la autenticacion 
 gem 'devise'
 
+
+gem 'rack-cors', require: 'rack/cors'
+
+gem 'jwt'
+
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
