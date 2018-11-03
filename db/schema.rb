@@ -10,104 +10,101 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_03_184515) do
+ActiveRecord::Schema.define(version: 2018_11_03_202207) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "barrios", force: :cascade do |t|
-    t.string "nombre"
-    t.integer "localidad_id"
-    t.string "latitud"
-    t.string "longitud"
+  create_table "garbage_types", force: :cascade do |t|
+    t.string "name"
+    t.string "picture"
+    t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "casos", force: :cascade do |t|
-    t.integer "usuario_id"
-    t.integer "barrio_id"
-    t.integer "tipo_basura"
-    t.string "foto"
-    t.text "detalle"
-    t.integer "estado_id"
-    t.datetime "fecha"
+  create_table "localities", force: :cascade do |t|
+    t.string "name"
+    t.integer "city_id"
+    t.integer "lat"
+    t.integer "long"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "estados", force: :cascade do |t|
-    t.string "nombre"
-    t.integer "tipoe_id"
+  create_table "notifications", force: :cascade do |t|
+    t.integer "subject_id"
+    t.integer "user_id"
+    t.integer "seen"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "localidades", force: :cascade do |t|
-    t.string "nombre"
-    t.integer "ciudad_id"
-    t.string "latitud"
-    t.string "longitud"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "notificaciones", force: :cascade do |t|
-    t.integer "caso_id"
-    t.integer "usuario_id"
-    t.integer "visto"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "operadores", force: :cascade do |t|
-    t.string "nombre"
-    t.string "telefono"
+  create_table "operators", force: :cascade do |t|
+    t.string "name"
+    t.string "phone"
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "posts", force: :cascade do |t|
-    t.string "nombre"
-    t.string "imagen"
-    t.datetime "fecha"
-    t.integer "calificacion"
+  create_table "publications", force: :cascade do |t|
+    t.string "picture"
+    t.integer "state_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+  
+  create_table "routes", force: :cascade do |t|
+    t.integer "operator_id"
+    t.integer "suburb_id"
+    t.string "horary"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "publicaciones", force: :cascade do |t|
-    t.string "foto"
-    t.integer "estado_id"
-    t.integer "usuario_id"
+  create_table "states", force: :cascade do |t|
+    t.string "name"
+    t.integer "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "rutas", force: :cascade do |t|
+  create_table "subjects", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "suburb_id"
+    t.integer "user_type_id"
+    t.string "picture"
+    t.text "detail"
+    t.integer "state_id"
+    t.datetime "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "sugerencias", force: :cascade do |t|
+  create_table "suburbs", force: :cascade do |t|
+    t.string "name"
+    t.integer "locality_id"
+    t.integer "lat"
+    t.integer "long"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "tipo_basuras", force: :cascade do |t|
-    t.string "nombre"
-    t.string "foto"
-    t.string "descripcion"
+  create_table "suggestions", force: :cascade do |t|
+    t.string "detail"
+    t.integer "user_id"
+    t.datetime "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "tips", force: :cascade do |t|
-    t.string "titulo"
-    t.string "detalle"
-    t.string "foto"
-    t.integer "tipot_id"
+    t.string "title"
+    t.string "detail"
+    t.string "picture"
+    t.integer "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -115,13 +112,13 @@ ActiveRecord::Schema.define(version: 2018_11_03_184515) do
   create_table "users", force: :cascade do |t|
     t.string "name", default: "", null: false
     t.string "email", default: "", null: false
-    t.integer "barrio_id"
-    t.string "direccion", default: ""
-    t.string "telefono", default: "", null: false
-    t.string "foto", default: "", null: false
-    t.integer "latitud", default: 0
-    t.integer "longitud", default: 0
-    t.integer "estado_id", default: 1, null: false
+    t.integer "suburb_id"
+    t.string "address", default: ""
+    t.string "phone", default: "", null: false
+    t.string "picture", default: "", null: false
+    t.integer "latitude", default: 0
+    t.integer "longitude", default: 0
+    t.integer "state_id", default: 1, null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"

@@ -17,7 +17,7 @@ class TipsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create tip" do
     assert_difference('Tip.count') do
-      post tips_url, params: { tip: { detalle: @tip.detalle, foto: @tip.foto, tipot_id: @tip.tipot_id, titulo: @tip.titulo } }
+      post tips_url, params: { tip: { detail: @tip.detail, picture: @tip.picture, title: @tip.title, type: @tip.type } }
     end
 
     assert_redirected_to tip_url(Tip.last)
@@ -34,7 +34,7 @@ class TipsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update tip" do
-    patch tip_url(@tip), params: { tip: { detalle: @tip.detalle, foto: @tip.foto, tipot_id: @tip.tipot_id, titulo: @tip.titulo } }
+    patch tip_url(@tip), params: { tip: { detail: @tip.detail, picture: @tip.picture, title: @tip.title, type: @tip.type } }
     assert_redirected_to tip_url(@tip)
   end
 

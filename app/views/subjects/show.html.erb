@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @subject.user_id %>
+</p>
+
+<p>
+  <strong>Suburb:</strong>
+  <%= @subject.suburb_id %>
+</p>
+
+<p>
+  <strong>User type:</strong>
+  <%= @subject.user_type_id %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= @subject.picture %>
+</p>
+
+<p>
+  <strong>Detail:</strong>
+  <%= @subject.detail %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @subject.state_id %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @subject.date %>
+</p>
+
+<%= link_to 'Edit', edit_subject_path(@subject) %> |
+<%= link_to 'Back', subjects_path %>

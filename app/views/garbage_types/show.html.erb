@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @garbage_type.name %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= @garbage_type.picture %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @garbage_type.description %>
+</p>
+
+<%= link_to 'Edit', edit_garbage_type_path(@garbage_type) %> |
+<%= link_to 'Back', garbage_types_path %>

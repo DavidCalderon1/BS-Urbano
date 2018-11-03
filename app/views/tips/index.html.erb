@@ -5,10 +5,10 @@
 <table>
   <thead>
     <tr>
-      <th>Titulo</th>
-      <th>Detalle</th>
-      <th>Foto</th>
-      <th>Tipot</th>
+      <th>Title</th>
+      <th>Detail</th>
+      <th>Picture</th>
+      <th>Type</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +16,10 @@
   <tbody>
     <% @tips.each do |tip| %>
       <tr>
-        <td><%= tip.titulo %></td>
-        <td><%= tip.detalle %></td>
-        <td><%= tip.foto %></td>
-        <td><%= tip.tipot_id %></td>
+        <td><%= tip.title %></td>
+        <td><%= tip.detail %></td>
+        <td><%= tip.picture %></td>
+        <td><%= tip.type %></td>
         <td><%= link_to 'Show', tip %></td>
         <td><%= link_to 'Edit', edit_tip_path(tip) %></td>
         <td><%= link_to 'Destroy', tip, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -14,10 +14,10 @@ class TipsTest < ApplicationSystemTestCase
     visit tips_url
     click_on "New Tip"
 
-    fill_in "Detalle", with: @tip.detalle
-    fill_in "Foto", with: @tip.foto
-    fill_in "Tipot", with: @tip.tipot_id
-    fill_in "Titulo", with: @tip.titulo
+    fill_in "Detail", with: @tip.detail
+    fill_in "Picture", with: @tip.picture
+    fill_in "Title", with: @tip.title
+    fill_in "Type", with: @tip.type
     click_on "Create Tip"
 
     assert_text "Tip was successfully created"
@@ -28,10 +28,10 @@ class TipsTest < ApplicationSystemTestCase
     visit tips_url
     click_on "Edit", match: :first
 
-    fill_in "Detalle", with: @tip.detalle
-    fill_in "Foto", with: @tip.foto
-    fill_in "Tipot", with: @tip.tipot_id
-    fill_in "Titulo", with: @tip.titulo
+    fill_in "Detail", with: @tip.detail
+    fill_in "Picture", with: @tip.picture
+    fill_in "Title", with: @tip.title
+    fill_in "Type", with: @tip.type
     click_on "Update Tip"
 
     assert_text "Tip was successfully updated"
