@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  operator_id: 1
+  suburb_id: 1
+  horary: MyString
+
+two:
+  operator_id: 1
+  suburb_id: 1
+  horary: MyString

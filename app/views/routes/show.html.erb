@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Operator:</strong>
+  <%= @route.operator_id %>
+</p>
+
+<p>
+  <strong>Suburb:</strong>
+  <%= @route.suburb_id %>
+</p>
+
+<p>
+  <strong>Horary:</strong>
+  <%= @route.horary %>
+</p>
+
+<%= link_to 'Edit', edit_route_path(@route) %> |
+<%= link_to 'Back', routes_path %>
