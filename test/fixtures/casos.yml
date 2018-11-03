@@ -4,7 +4,7 @@ one:
   usuario_id: 1
   barrio_id: 1
   tipo_basura: 1
-  foto_string: MyString
+  foto: MyString
   detalle: MyText
   estado_id: 1
   fecha: 2018-11-02 01:15:04
@@ -13,7 +13,7 @@ two:
   usuario_id: 1
   barrio_id: 1
   tipo_basura: 1
-  foto_string: MyString
+  foto: MyString
   detalle: MyText
   estado_id: 1
   fecha: 2018-11-02 01:15:04

@@ -69,6 +69,6 @@ class CasosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def caso_params
-      params.require(:caso).permit(:usuario_id, :barrio_id, :tipo_basura, :foto_string, :detalle, :estado_id, :fecha)
+      params.require(:caso).permit(:usuario_id, :barrio_id, :tipo_basura, :foto, :detalle, :estado_id, :fecha)
     end
 end

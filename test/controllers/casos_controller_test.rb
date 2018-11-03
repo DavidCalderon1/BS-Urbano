@@ -17,7 +17,7 @@ class CasosControllerTest < ActionDispatch::IntegrationTest
 
   test "should create caso" do
     assert_difference('Caso.count') do
-      post casos_url, params: { caso: { barrio_id: @caso.barrio_id, detalle: @caso.detalle, estado_id: @caso.estado_id, fecha: @caso.fecha, foto_string: @caso.foto_string, tipo_basura: @caso.tipo_basura, usuario_id: @caso.usuario_id } }
+      post casos_url, params: { caso: { barrio_id: @caso.barrio_id, detalle: @caso.detalle, estado_id: @caso.estado_id, fecha: @caso.fecha, foto: @caso.foto, tipo_basura: @caso.tipo_basura, usuario_id: @caso.usuario_id } }
     end
 
     assert_redirected_to caso_url(Caso.last)
@@ -34,7 +34,7 @@ class CasosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update caso" do
-    patch caso_url(@caso), params: { caso: { barrio_id: @caso.barrio_id, detalle: @caso.detalle, estado_id: @caso.estado_id, fecha: @caso.fecha, foto_string: @caso.foto_string, tipo_basura: @caso.tipo_basura, usuario_id: @caso.usuario_id } }
+    patch caso_url(@caso), params: { caso: { barrio_id: @caso.barrio_id, detalle: @caso.detalle, estado_id: @caso.estado_id, fecha: @caso.fecha, foto: @caso.foto, tipo_basura: @caso.tipo_basura, usuario_id: @caso.usuario_id } }
     assert_redirected_to caso_url(@caso)
   end
 

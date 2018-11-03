@@ -18,7 +18,7 @@ class CasosTest < ApplicationSystemTestCase
     fill_in "Detalle", with: @caso.detalle
     fill_in "Estado", with: @caso.estado_id
     fill_in "Fecha", with: @caso.fecha
-    fill_in "Foto String", with: @caso.foto_string
+    fill_in "Foto", with: @caso.foto
     fill_in "Tipo Basura", with: @caso.tipo_basura
     fill_in "Usuario", with: @caso.usuario_id
     click_on "Create Caso"
@@ -35,7 +35,7 @@ class CasosTest < ApplicationSystemTestCase
     fill_in "Detalle", with: @caso.detalle
     fill_in "Estado", with: @caso.estado_id
     fill_in "Fecha", with: @caso.fecha
-    fill_in "Foto String", with: @caso.foto_string
+    fill_in "Foto", with: @caso.foto
     fill_in "Tipo Basura", with: @caso.tipo_basura
     fill_in "Usuario", with: @caso.usuario_id
     click_on "Update Caso"

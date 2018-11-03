@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2018_11_02_225824) do
     t.integer "usuario_id"
     t.integer "barrio_id"
     t.integer "tipo_basura"
-    t.string "foto_string"
+    t.string "foto"
     t.text "detalle"
     t.integer "estado_id"
     t.datetime "fecha"

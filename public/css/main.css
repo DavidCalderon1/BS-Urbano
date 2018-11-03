@@ -630,6 +630,7 @@ input.input100 {
 
 body > nav + .contenedor {
   padding-top: 65px;
+  padding-bottom: 55px;
 }
 
 body > .contenedor > form input {
