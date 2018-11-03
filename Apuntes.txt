@@ -141,3 +141,6 @@ Sistemas de roles y permisos
 	https://chunksofco.de/very-simple-api-permissions-in-rails-d37e21f09ff8
 	https://github.com/chaps-io/access-granted
 	https://www.culttt.com/2016/01/20/implementing-roles-and-permissions-in-ruby-on-rails/
+
+Gemas que se podrian utilizar
+	https://rubygarage.org/blog/best-ruby-gems-we-use#article_title_9
