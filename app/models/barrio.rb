@@ -1,2 +1,0 @@
-class Barrio < ApplicationRecord
-end

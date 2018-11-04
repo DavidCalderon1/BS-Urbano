@@ -1,2 +1,0 @@
-module SugerenciasHelper
-end

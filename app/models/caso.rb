@@ -1,2 +1,0 @@
-class Caso < ApplicationRecord
-end

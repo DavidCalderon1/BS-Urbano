@@ -1,2 +1,0 @@
-class Localidade < ApplicationRecord
-end

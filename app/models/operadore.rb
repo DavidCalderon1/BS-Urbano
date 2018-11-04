@@ -1,2 +1,0 @@
-class Operadore < ApplicationRecord
-end
