@@ -137,6 +137,8 @@ Inicio sesión RRSS
 
 Sistemas de roles y permisos 
 	https://github.com/RolifyCommunity/rolify
+	- uso de Devise + CanCanCan + rolify
+		https://github.com/RolifyCommunity/rolify/wiki/Devise---CanCanCan---rolify-Tutorial
 	
 	https://chunksofco.de/very-simple-api-permissions-in-rails-d37e21f09ff8
 	https://github.com/chaps-io/access-granted

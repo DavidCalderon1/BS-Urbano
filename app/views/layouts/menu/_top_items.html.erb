@@ -7,23 +7,25 @@
         <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown">
-              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Modulos <span class="caret"></span></a>
-              <ul class="dropdown-menu bg-dark">
-                <%= link_to('Barrios', suburbs_path, method: :get , :class => "nav-link" ) %>
-                <%= link_to('Casos', subjects_path, method: :get , :class => "nav-link" ) %>
-                <%= link_to('Estados', states_path, method: :get , :class => "nav-link" ) %>
-                <%= link_to('Localidades', localities_path, method: :get , :class => "nav-link" ) %>
-                <%= link_to('Notificaciones', notifications_path, method: :get , :class => "nav-link" ) %>
-                <%= link_to('Operadores', operators_path, method: :get , :class => "nav-link" ) %>
-                <%= link_to('Publicaciones', publications_path, method: :get , :class => "nav-link" ) %>
-                <%= link_to('Rutas', routes_path, method: :get , :class => "nav-link" ) %>
-                <%= link_to('Sugerencias', suggestions_path, method: :get , :class => "nav-link" ) %>
-                <%= link_to('Tipo de basuras', garbage_types_path, method: :get , :class => "nav-link" ) %>
-                <%= link_to('Tips', tips_path, method: :get , :class => "nav-link" ) %>
-              </ul>
-            </li>
+          <ul class="navbar-nav ml-auto">
+            <% if current_user.has_role? :admin %>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Modulos <span class="caret"></span></a>
+                <ul class="dropdown-menu bg-dark">
+                  <%= link_to('Barrios', suburbs_path, method: :get , :class => "nav-link" ) %>
+                  <%= link_to('Casos', subjects_path, method: :get , :class => "nav-link" ) %>
+                  <%= link_to('Estados', states_path, method: :get , :class => "nav-link" ) %>
+                  <%= link_to('Localidades', localities_path, method: :get , :class => "nav-link" ) %>
+                  <%= link_to('Notificaciones', notifications_path, method: :get , :class => "nav-link" ) %>
+                  <%= link_to('Operadores', operators_path, method: :get , :class => "nav-link" ) %>
+                  <%= link_to('Publicaciones', publications_path, method: :get , :class => "nav-link" ) %>
+                  <%= link_to('Rutas', routes_path, method: :get , :class => "nav-link" ) %>
+                  <%= link_to('Sugerencias', suggestions_path, method: :get , :class => "nav-link" ) %>
+                  <%= link_to('Tipo de basuras', garbage_types_path, method: :get , :class => "nav-link" ) %>
+                  <%= link_to('Tips', tips_path, method: :get , :class => "nav-link" ) %>
+                </ul>
+              </li>
+            <% end %>
             <li class="nav-item active">
               <%= link_to('Editar Perfil', edit_user_registration_path, :class => "nav-link") %>
             </li>

@@ -16,8 +16,8 @@ class TipsTest < ApplicationSystemTestCase
 
     fill_in "Detail", with: @tip.detail
     fill_in "Picture", with: @tip.picture
+    fill_in "Tip Type", with: @tip.tip_type
     fill_in "Title", with: @tip.title
-    fill_in "Type", with: @tip.type
     click_on "Create Tip"
 
     assert_text "Tip was successfully created"
@@ -30,8 +30,8 @@ class TipsTest < ApplicationSystemTestCase
 
     fill_in "Detail", with: @tip.detail
     fill_in "Picture", with: @tip.picture
+    fill_in "Tip Type", with: @tip.tip_type
     fill_in "Title", with: @tip.title
-    fill_in "Type", with: @tip.type
     click_on "Update Tip"
 
     assert_text "Tip was successfully updated"

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :tips
+  resources :states
 	resources :notifications
 	resources :subjects
 	resources :routes

@@ -2,12 +2,12 @@
 
 one:
   title: MyString
-  detail: MyString
+  detail: MyText
   picture: MyString
-  type: 1
+  tip_type: 1
 
 two:
   title: MyString
-  detail: MyString
+  detail: MyText
   picture: MyString
-  type: 1
+  tip_type: 1

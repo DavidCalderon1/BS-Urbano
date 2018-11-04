@@ -15,7 +15,7 @@ class StatesTest < ApplicationSystemTestCase
     click_on "New State"
 
     fill_in "Name", with: @state.name
-    fill_in "Type", with: @state.type
+    fill_in "State Type", with: @state.state_type
     click_on "Create State"
 
     assert_text "State was successfully created"
@@ -27,7 +27,7 @@ class StatesTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Name", with: @state.name
-    fill_in "Type", with: @state.type
+    fill_in "State Type", with: @state.state_type
     click_on "Update State"
 
     assert_text "State was successfully updated"

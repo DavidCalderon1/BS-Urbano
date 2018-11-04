@@ -33,6 +33,9 @@ gem 'rack-cors', require: 'rack/cors'
 
 gem 'jwt'
 
+gem 'cancancan'
+
+gem 'rolify'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
