@@ -30,9 +30,10 @@ class Ability
     # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
 
     if user.has_role? :admin
-      can :manage, :all
+        can :assign_roles
+        can :manage, :all
     else
-      can :read, :all
+        can :read, :all
     end
   end
 end

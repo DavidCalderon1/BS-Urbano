@@ -149,3 +149,6 @@ documetacion para presentacion del prototipo
 	MER db 
 	requerimientos funcionales 
 	
+
+ejecutar consola desde cmd 
+	heroku run rails console -a bs-urbano
