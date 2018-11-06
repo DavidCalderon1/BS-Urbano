@@ -22,9 +22,9 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # gemas para bootstrap y jquery
-gem 'jquery-rails'
+# gem 'jquery-rails'
 
-gem 'font-awesome-rails'
+# gem 'font-awesome-rails'
 # para la autenticacion 
 gem 'devise'
 
