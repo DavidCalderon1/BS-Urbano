@@ -1,5 +1,6 @@
 class Api::V1::UsersController < ApplicationController
     def index
-        render json: User.all
+        results = {'results' => User.all}
+    	render json: results
     end
 end

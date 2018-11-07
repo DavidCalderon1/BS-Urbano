@@ -5,7 +5,9 @@ class Api::V1::SuggestionsController < ApplicationController
   # GET /suggestions
   # GET /suggestions.json
   def index
-    render json: Suggestion.all
+  	
+  	results = {'results' => Suggestion.all}
+    render json: results
   end
 
   # GET /suggestions/1
