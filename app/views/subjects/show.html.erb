@@ -11,8 +11,23 @@
 </p>
 
 <p>
-  <strong>User type:</strong>
-  <%= @subject.user_type_id %>
+  <strong>Address:</strong>
+  <%= @subject.address %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @subject.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @subject.longitude %>
+</p>
+
+<p>
+  <strong>Garbage type:</strong>
+  <%= @subject.garbage_type_id %>
 </p>
 
 <p>
@@ -28,11 +43,6 @@
 <p>
   <strong>State:</strong>
   <%= @subject.state_id %>
-</p>
-
-<p>
-  <strong>Date:</strong>
-  <%= @subject.date %>
 </p>
 
 <%= link_to 'Edit', edit_subject_path(@subject) %> |

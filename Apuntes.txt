@@ -152,3 +152,6 @@ documetacion para presentacion del prototipo
 
 ejecutar consola desde cmd 
 	heroku run rails console -a bs-urbano
+
+crear proyecto en ionic para consumir api en ruby
+	https://railsjavascriptyotrashiebas.wordpress.com/2015/07/27/tutorial-creando-una-app-con-ruby-on-rails-api-angularjs-y-ionic-framework-botiappsasi-1parte-el-nacimiento/

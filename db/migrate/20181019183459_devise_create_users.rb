@@ -10,8 +10,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.string :address,              null: true, default: ""
       t.string :phone,              null: false, default: ""
       t.string :picture,              null: false, default: ""
-      t.integer :latitude,              null: true, default: 0
-      t.integer :longitude,              null: true, default: 0
+      t.float :latitude,              null: true, default: 0
+      t.float :longitude,              null: true, default: 0
       t.integer :state_id,              null: false, default: 1
       t.string :encrypted_password, null: false, default: ""
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_04_044503) do
+ActiveRecord::Schema.define(version: 2018_11_07_164946) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,8 +26,8 @@ ActiveRecord::Schema.define(version: 2018_11_04_044503) do
   create_table "localities", force: :cascade do |t|
     t.string "name"
     t.integer "city_id"
-    t.integer "lat"
-    t.integer "long"
+    t.float "latitude"
+    t.float "longitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -84,11 +84,13 @@ ActiveRecord::Schema.define(version: 2018_11_04_044503) do
   create_table "subjects", force: :cascade do |t|
     t.integer "user_id"
     t.integer "suburb_id"
-    t.integer "user_type_id"
+    t.string "address"
+    t.float "latitude"
+    t.float "longitude"
+    t.integer "garbage_type_id"
     t.string "picture"
     t.text "detail"
     t.integer "state_id"
-    t.datetime "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -96,8 +98,8 @@ ActiveRecord::Schema.define(version: 2018_11_04_044503) do
   create_table "suburbs", force: :cascade do |t|
     t.string "name"
     t.integer "locality_id"
-    t.integer "lat"
-    t.integer "long"
+    t.float "latitude"
+    t.float "longitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -126,8 +128,8 @@ ActiveRecord::Schema.define(version: 2018_11_04_044503) do
     t.string "address", default: ""
     t.string "phone", default: "", null: false
     t.string "picture", default: "", null: false
-    t.integer "latitude", default: 0
-    t.integer "longitude", default: 0
+    t.float "latitude", default: 0.0
+    t.float "longitude", default: 0.0
     t.integer "state_id", default: 1, null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"

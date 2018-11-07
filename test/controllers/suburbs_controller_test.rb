@@ -17,7 +17,7 @@ class SuburbsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create suburb" do
     assert_difference('Suburb.count') do
-      post suburbs_url, params: { suburb: { lat: @suburb.lat, locality_id: @suburb.locality_id, long: @suburb.long, name: @suburb.name } }
+      post suburbs_url, params: { suburb: { latitude: @suburb.latitude, locality_id: @suburb.locality_id, longitude: @suburb.longitude, name: @suburb.name } }
     end
 
     assert_redirected_to suburb_url(Suburb.last)
@@ -34,7 +34,7 @@ class SuburbsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update suburb" do
-    patch suburb_url(@suburb), params: { suburb: { lat: @suburb.lat, locality_id: @suburb.locality_id, long: @suburb.long, name: @suburb.name } }
+    patch suburb_url(@suburb), params: { suburb: { latitude: @suburb.latitude, locality_id: @suburb.locality_id, longitude: @suburb.longitude, name: @suburb.name } }
     assert_redirected_to suburb_url(@suburb)
   end
 

@@ -3,17 +3,21 @@
 one:
   user_id: 1
   suburb_id: 1
-  user_type_id: 1
+  address: MyString
+  latitude: 1.5
+  longitude: 1.5
+  garbage_type_id: 1
   picture: MyString
   detail: MyText
   state_id: 1
-  date: 2018-11-03 15:20:54
 
 two:
   user_id: 1
   suburb_id: 1
-  user_type_id: 1
+  address: MyString
+  latitude: 1.5
+  longitude: 1.5
+  garbage_type_id: 1
   picture: MyString
   detail: MyText
   state_id: 1
-  date: 2018-11-03 15:20:54

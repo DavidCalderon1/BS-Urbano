@@ -15,8 +15,8 @@ class LocalitiesTest < ApplicationSystemTestCase
     click_on "New Locality"
 
     fill_in "City", with: @locality.city_id
-    fill_in "Lat", with: @locality.lat
-    fill_in "Long", with: @locality.long
+    fill_in "Latitude", with: @locality.latitude
+    fill_in "Longitude", with: @locality.longitude
     fill_in "Name", with: @locality.name
     click_on "Create Locality"
 
@@ -29,8 +29,8 @@ class LocalitiesTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "City", with: @locality.city_id
-    fill_in "Lat", with: @locality.lat
-    fill_in "Long", with: @locality.long
+    fill_in "Latitude", with: @locality.latitude
+    fill_in "Longitude", with: @locality.longitude
     fill_in "Name", with: @locality.name
     click_on "Update Locality"
 

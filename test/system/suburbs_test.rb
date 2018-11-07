@@ -14,9 +14,9 @@ class SuburbsTest < ApplicationSystemTestCase
     visit suburbs_url
     click_on "New Suburb"
 
-    fill_in "Lat", with: @suburb.lat
+    fill_in "Latitude", with: @suburb.latitude
     fill_in "Locality", with: @suburb.locality_id
-    fill_in "Long", with: @suburb.long
+    fill_in "Longitude", with: @suburb.longitude
     fill_in "Name", with: @suburb.name
     click_on "Create Suburb"
 
@@ -28,9 +28,9 @@ class SuburbsTest < ApplicationSystemTestCase
     visit suburbs_url
     click_on "Edit", match: :first
 
-    fill_in "Lat", with: @suburb.lat
+    fill_in "Latitude", with: @suburb.latitude
     fill_in "Locality", with: @suburb.locality_id
-    fill_in "Long", with: @suburb.long
+    fill_in "Longitude", with: @suburb.longitude
     fill_in "Name", with: @suburb.name
     click_on "Update Suburb"
 

@@ -69,6 +69,6 @@ class LocalitiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def locality_params
-      params.require(:locality).permit(:name, :city_id, :lat, :long)
+      params.require(:locality).permit(:name, :city_id, :latitude, :longitude)
     end
 end

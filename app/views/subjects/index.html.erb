@@ -7,11 +7,13 @@
     <tr>
       <th>User</th>
       <th>Suburb</th>
-      <th>User type</th>
+      <th>Address</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Garbage type</th>
       <th>Picture</th>
       <th>Detail</th>
       <th>State</th>
-      <th>Date</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -21,11 +23,13 @@
       <tr>
         <td><%= subject.user_id %></td>
         <td><%= subject.suburb_id %></td>
-        <td><%= subject.user_type_id %></td>
+        <td><%= subject.address %></td>
+        <td><%= subject.latitude %></td>
+        <td><%= subject.longitude %></td>
+        <td><%= subject.garbage_type_id %></td>
         <td><%= subject.picture %></td>
         <td><%= subject.detail %></td>
         <td><%= subject.state_id %></td>
-        <td><%= subject.date %></td>
         <td><%= link_to 'Show', subject %></td>
         <td><%= link_to 'Edit', edit_subject_path(subject) %></td>
         <td><%= link_to 'Destroy', subject, method: :delete, data: { confirm: 'Are you sure?' } %></td>

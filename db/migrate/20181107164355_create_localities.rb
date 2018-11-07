@@ -3,8 +3,8 @@ class CreateLocalities < ActiveRecord::Migration[5.2]
     create_table :localities do |t|
       t.string :name
       t.integer :city_id
-      t.integer :lat
-      t.integer :long
+      t.float :latitude
+      t.float :longitude
 
       t.timestamps
     end

@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  resources :subjects
+  resources :suburbs
+  resources :localities
   resources :tips
   resources :states
 	resources :notifications
@@ -34,6 +37,7 @@ Rails.application.routes.draw do
 	namespace :api, defaults: { format: 'json' } do
 		namespace :v1 do 
 			resources :users, only: [:index]
+			resources :suggestions
 		end
 	end
 end

@@ -17,7 +17,7 @@ class SubjectsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create subject" do
     assert_difference('Subject.count') do
-      post subjects_url, params: { subject: { date: @subject.date, detail: @subject.detail, picture: @subject.picture, state_id: @subject.state_id, suburb_id: @subject.suburb_id, user_id: @subject.user_id, user_type_id: @subject.user_type_id } }
+      post subjects_url, params: { subject: { address: @subject.address, detail: @subject.detail, garbage_type_id: @subject.garbage_type_id, latitude: @subject.latitude, longitude: @subject.longitude, picture: @subject.picture, state_id: @subject.state_id, suburb_id: @subject.suburb_id, user_id: @subject.user_id } }
     end
 
     assert_redirected_to subject_url(Subject.last)
@@ -34,7 +34,7 @@ class SubjectsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update subject" do
-    patch subject_url(@subject), params: { subject: { date: @subject.date, detail: @subject.detail, picture: @subject.picture, state_id: @subject.state_id, suburb_id: @subject.suburb_id, user_id: @subject.user_id, user_type_id: @subject.user_type_id } }
+    patch subject_url(@subject), params: { subject: { address: @subject.address, detail: @subject.detail, garbage_type_id: @subject.garbage_type_id, latitude: @subject.latitude, longitude: @subject.longitude, picture: @subject.picture, state_id: @subject.state_id, suburb_id: @subject.suburb_id, user_id: @subject.user_id } }
     assert_redirected_to subject_url(@subject)
   end
 

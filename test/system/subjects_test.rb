@@ -14,13 +14,15 @@ class SubjectsTest < ApplicationSystemTestCase
     visit subjects_url
     click_on "New Subject"
 
-    fill_in "Date", with: @subject.date
+    fill_in "Address", with: @subject.address
     fill_in "Detail", with: @subject.detail
+    fill_in "Garbage Type", with: @subject.garbage_type_id
+    fill_in "Latitude", with: @subject.latitude
+    fill_in "Longitude", with: @subject.longitude
     fill_in "Picture", with: @subject.picture
     fill_in "State", with: @subject.state_id
     fill_in "Suburb", with: @subject.suburb_id
     fill_in "User", with: @subject.user_id
-    fill_in "User Type", with: @subject.user_type_id
     click_on "Create Subject"
 
     assert_text "Subject was successfully created"
@@ -31,13 +33,15 @@ class SubjectsTest < ApplicationSystemTestCase
     visit subjects_url
     click_on "Edit", match: :first
 
-    fill_in "Date", with: @subject.date
+    fill_in "Address", with: @subject.address
     fill_in "Detail", with: @subject.detail
+    fill_in "Garbage Type", with: @subject.garbage_type_id
+    fill_in "Latitude", with: @subject.latitude
+    fill_in "Longitude", with: @subject.longitude
     fill_in "Picture", with: @subject.picture
     fill_in "State", with: @subject.state_id
     fill_in "Suburb", with: @subject.suburb_id
     fill_in "User", with: @subject.user_id
-    fill_in "User Type", with: @subject.user_type_id
     click_on "Update Subject"
 
     assert_text "Subject was successfully updated"
