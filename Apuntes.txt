@@ -155,3 +155,14 @@ ejecutar consola desde cmd
 
 crear proyecto en ionic para consumir api en ruby
 	https://railsjavascriptyotrashiebas.wordpress.com/2015/07/27/tutorial-creando-una-app-con-ruby-on-rails-api-angularjs-y-ionic-framework-botiappsasi-1parte-el-nacimiento/
+
+IONIC 
+	crear formulario 
+		https://robferguson.org/blog/2017/11/19/ionic-3-and-forms/
+	crear page 
+		ionic g page sign-in
+
+LINKS DESARROLLO ANDROID
+	http://ai2.appinventor.mit.edu 
+	https://www.appcelerator.com/
+	https://www.b4x.com/b4a.html
