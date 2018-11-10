@@ -6,6 +6,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
 	after_create :assign_default_role
+	
+	has_many :suggestions
 
 	def assign_default_role
 		if self.id == 1

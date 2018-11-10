@@ -1,5 +1,5 @@
 
-class Api::V1::SuggestionsController < ApplicationController
+class Api::V1::SuggestionsController < Api::V1::BaseController
   before_action :set_suggestion, only: [:show, :edit, :update, :destroy]
 
   # GET /suggestions
