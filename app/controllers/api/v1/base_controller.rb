@@ -1,16 +1,17 @@
 class Api::V1::BaseController < ApplicationController
-  skip_before_action :verify_authenticity_token
-  before_action :authenticate!
+  # skip_before_action :verify_authenticity_token
+  # before_action :authenticate!
   token = 0
 
 
   def authenticate!
-    auth_header = request.headers['Authorization']
+    # auth_header = request.headers['Authorization']
     # token = auth_header.split(' ').last
-    token = auth_header
-    return true if JsonWebToken.decode(token)
+    # token = auth_header
+    # return true if JsonWebToken.decode(token)
+    return true 
   rescue
-    render json: {error: "Error en la autenticación, Token Errado",token: token }
+    render json: {error: "Error en la autenticación, Token Errado!!",token: token }
   end
 
   def invalid_authentication

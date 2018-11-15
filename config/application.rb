@@ -17,10 +17,12 @@ module BSUrbano
     # the framework and any gems in your application.
     # Rails 5
 
-    config.middleware.insert_before 0, Rack::Cors do
+    config.middleware.insert_before ActionDispatch::Static, Rack::Cors do
       allow do
-        origins '*'
-        resource '*', headers: :any, methods: [:get, :post, :delete, :put, :options]
+        origins 'localhost:3000', '127.0.0.1:3000',
+            /\Ahttp:\/\/192\.168\.0\.\d{1,3}(:\d+)?\z/,
+            '*'
+        resource '*', headers: :any, methods: [:get, :post, :options, :delete, :put]
       end
     end
     
