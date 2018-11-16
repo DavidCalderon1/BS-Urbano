@@ -166,3 +166,7 @@ LINKS DESARROLLO ANDROID
 	http://ai2.appinventor.mit.edu 
 	https://www.appcelerator.com/
 	https://www.b4x.com/b4a.html
+
+
+crear crud ionic
+	https://www.djamware.com/post/5b5cffaf80aca707dd4f65aa/building-crud-mobile-app-using-ionic-4-angular-6-and-cordova

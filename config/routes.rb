@@ -1,19 +1,14 @@
 Rails.application.routes.draw do
-  resources :subjects
-  resources :suburbs
-  resources :localities
-  resources :tips
-  resources :states
-	resources :notifications
 	resources :subjects
+	resources :suburbs
+	resources :localities
+	resources :tips
+	resources :states
+	resources :notifications
 	resources :routes
 	resources :operators
 	resources :suggestions
-	resources :tips
 	resources :garbage_types
-	resources :states
-	resources :localities
-	resources :suburbs
 	resources :publications
 	# rutas para todas las funciones de autenticacion
   devise_for :users, :controllers => { 
@@ -35,6 +30,7 @@ Rails.application.routes.draw do
 		namespace :v1 do 
 			resources :users, only: [:index, :show]
 			resources :suggestions
+			resources :subjects
 
 			devise_scope :user do
 				match '/sessions' => 'sessions#create', via: :post
