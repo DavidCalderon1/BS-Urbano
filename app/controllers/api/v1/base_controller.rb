@@ -8,8 +8,8 @@ class Api::V1::BaseController < ApplicationController
     auth_header = request.headers['Authorization']
     # token = auth_header.split(' ').last
     token = auth_header
-    # return true if JsonWebToken.decode(token)
-    return true 
+    return true if JsonWebToken.decode(token)
+    # return true 
   rescue
     render json: {error: "Error en la autenticación, Token Errado!!",token: token }
   end

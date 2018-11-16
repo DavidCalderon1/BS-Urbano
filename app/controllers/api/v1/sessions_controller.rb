@@ -6,7 +6,7 @@ class Api::V1::SessionsController < Devise::SessionsController
     user  = User.find_for_database_authentication(email: params[:user][:email])
     if user && user.valid_password?(params[:user][:password])
       auth_token = jwt_token(user)
-      render json: {auth_token: auth_token}
+      render json: {auth_token: auth_token, id_user: user.id}
     else
       invalid_login
     end
