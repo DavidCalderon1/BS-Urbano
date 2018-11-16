@@ -1,6 +1,6 @@
 class Api::V1::SessionsController < Devise::SessionsController
   require 'json_web_token'
-  skip_before_action :verify_authenticity_token
+  # skip_before_action :verify_authenticity_token
   
   def create
     user  = User.find_for_database_authentication(email: params[:user][:email])

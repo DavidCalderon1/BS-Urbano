@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   resources :subjects
   resources :suburbs
   resources :localities
@@ -29,11 +28,9 @@ Rails.application.routes.draw do
   scope "/admin" do
     resources :users
   end
-
-	# For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 	root 'welcome#index'
 	get '/home', to: 'home#index', as: 'home'
-
 	namespace :api, defaults: { format: 'json' } do
 		namespace :v1 do 
 			resources :users, only: [:index, :show]
@@ -45,7 +42,4 @@ Rails.application.routes.draw do
 			end
 		end
 	end
-	
-
-
 end

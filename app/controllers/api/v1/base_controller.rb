@@ -1,13 +1,13 @@
 class Api::V1::BaseController < ApplicationController
   # skip_before_action :verify_authenticity_token
-  # before_action :authenticate!
+  before_action :authenticate!
   token = 0
 
 
   def authenticate!
-    # auth_header = request.headers['Authorization']
+    auth_header = request.headers['Authorization']
     # token = auth_header.split(' ').last
-    # token = auth_header
+    token = auth_header
     # return true if JsonWebToken.decode(token)
     return true 
   rescue
