@@ -2,13 +2,13 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">BS-Urbano</a>
+        <%= link_to('BS-Urbano', home_path, method: :get , :class => "navbar-brand" ) %>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <% if current_user.has_role? :admin %>
+            <%# if current_user.has_role? :admin %>
               <li class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Modulos <span class="caret"></span></a>
                 <ul class="dropdown-menu bg-dark">
@@ -25,18 +25,18 @@
                   <%= link_to('Tips', tips_path, method: :get , :class => "nav-link" ) %>
                 </ul>
               </li>
-            <% end %>
+            <%# end %>
             <li class="nav-item active">
               <%= link_to('Editar Perfil', edit_user_registration_path, :class => "nav-link") %>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Mis casos</a>
+              <%= link_to('Mis casos', subjects_path, method: :get , :class => "nav-link" ) %>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Sugerencias</a>
+              <%= link_to('Sugerencias', suggestions_path, method: :get , :class => "nav-link" ) %>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Notificaciones</a>
+              <%= link_to('Notificaciones', notifications_path, method: :get , :class => "nav-link" ) %>
             </li>
             <li class="nav-item">
               <%= link_to('Cerrar Sesión', destroy_user_session_path, method: :get , :class => "nav-link" ) %>

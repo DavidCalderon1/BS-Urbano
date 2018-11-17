@@ -4,17 +4,17 @@
       <div class="container d-flex justify-content-center">
         <ul class=" ">
             
-            <a class="nav-link " href="#" style="display: inline-block;">
+            <%= link_to(home_path, :class => "nav-link", :style => "display: inline-block;") do %>
               <li class="nav-item fas fa-home"></li>
-            </a>
+            <% end %>
 
-            <a class="nav-link" href="#" style="display: inline-block;">
+            <%= link_to(subjects_path, :class => "nav-link", :style => "display: inline-block;") do %>
               <li class="nav-item far fa-lightbulb"></li>
-            </a>
+            <% end %>
 
-            <a class="nav-link" href="#" style="display: inline-block;">
+            <%= link_to(notifications_path, :class => "nav-link", :style => "display: inline-block;") do %>
               <li class="nav-item far fa-bell"></li>
-            </a>
+            <% end %>
 
           </ul>
       </div>
